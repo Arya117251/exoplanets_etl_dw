@@ -34,6 +34,9 @@ exoplanets_etl_dw/
 - Loaded raw CSV data of exoplanets.  
 - Cleaned it into a usable format (`exoplanets_cleaned.csv`).  
 - Script: `ingest_exoplanets.py` ✅
+- Python ingestion script is compatible with most ETL systems.
+Airflow: wrap ingest_exoplanets.py and create_dw_tables.py as tasks in a DAG
+Snowflake: load the CSVs into Snowflake tables using COPY INTO or snowflake-connector-python
 
 ### 2️⃣ Dimension Tables
 - **Planet Dimension (`planet_dim.csv`)**: Unique planets with `planet_id`. 🌍  
